@@ -1,0 +1,11 @@
+sort1 uses: Bubble Sort
+
+How do you know?: When testing sorted lists, sort1 performs faster than sort3, and when testing the largest sorted list, sort1 performed better than sort 2 and sort3
+
+sort2 uses: Merge Sort
+
+How do you know?: When testing the largest lists, sort 2 performed better than sort1 and sort3, specially when testing the random lists.
+
+sort3 uses: Selection Sort
+
+How do you know?: When testing the sorted lists, sort3 performed slower than sort1 and sort2 but when testing the reversed and random  lists sort3 performed faster than sort1.
