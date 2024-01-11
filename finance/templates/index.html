@@ -1,0 +1,74 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Welcome to your page
+{% endblock %}
+
+{% block main %}
+    <div class="mb-3">
+        <h1>WELCOME TO YOUR PAGE</h1>
+        <table class="table">
+            <thead>
+                <tr>
+                    <th scope="col">Stock</th>
+                    <th scope="col"># of Shares</th>
+                    <th scope="col">Current Price</th>
+                    <th scope="col">Total Value</th>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>
+                        {% for symbol in symbols %}
+                        <p>{{ symbol }}</p>
+                        {% endfor %}
+
+                    </td>
+                    <td>
+                        {% for share in shares %}
+                        <p>{{ share }}</p>
+                        {% endfor %}
+                    </td>
+                    <td>
+                        {% for price in prices %}
+                        <p>{{ price | usd }}</p>
+                        {% endfor %}
+                    </td>
+                    <td>
+                        {% for value in total_values %}
+                        <p>{{ value | usd }}</p>
+                        {% endfor %}
+                    </td>
+
+                </tr>
+
+            </tbody>
+
+        </table>
+
+        <div class="mb-3">
+            <h3> Your Cash Balance is:</h3>
+            <h4> {{ cash_balance }}</h4>
+            <h3> Your GRAND TOTAL is:</h3>
+            <h4> {{ grand_total}} </h4>
+        </div>
+        <div class="mb-3">
+            <h5> ADD CASH </h5>
+            <h6> How much Cash Would you like to add to your account?</h6>
+            <form action="/add_cash" method="post">
+                <input autocomplete="off" name="add_cash" placeholder="Add Cash" type="text">
+                <button type="submit">Add Cash</button>
+            </form>
+        </div>
+        <div>
+            {% with messages = get_flashed_messages(with_categories=true) %}
+            {% if messages %}
+                {% for category, message in messages %}
+                    <div class="alert alert-{{ category }}">
+                        {{ message }}
+                    </div>
+                {% endfor %}
+            {% endif %}
+            {% endwith %}
+        </div>
+    </div>
+{% endblock %}

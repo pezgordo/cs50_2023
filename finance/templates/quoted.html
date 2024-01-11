@@ -1,0 +1,17 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Register
+{% endblock %}
+
+{% block main %}
+
+    <div class="mb-3">
+        <p>Name: {{ name }}</p>
+        <p>Price: {{ price | usd }}</p>
+        <p>Symbol: {{ symbol }}</p>
+    </div>
+
+
+
+{% endblock %}

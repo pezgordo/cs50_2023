@@ -1,0 +1,9 @@
+Mario less steps pseudo code
+
+1. declare height variable
+
+2. height must not be less than 1 or more than 8
+
+3. loop 1 through height variable
+
+4. for each loop iteration print hash and create a new line

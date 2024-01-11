@@ -1,0 +1,23 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Register
+{% endblock %}
+
+{% block main %}
+    <div class="mb-3">
+        <p>SELL STOCKS</p>
+        <form action="/sell" method="post">
+            <select name="symbol">
+                <option disabled selected>Pick stock</option>
+                {% for stock in owned.keys() %}
+                    <option value="{{ stock }}"> {{ stock }}</option>
+                {% endfor %}
+            </select>
+            <input autocomplete="off" autofocus class="form-control mx-auto w-auto" id="shares" name="shares" placeholder="# of stocks to sell" type="text">
+            <button type="submit" name="action" value="check_stock">Sell shares</button>
+        </form>
+    </div>
+
+{% endblock %}
+

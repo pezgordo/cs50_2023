@@ -1,0 +1,11 @@
+QUESTION: If songs.db contains the top 100 songs of one listener from 2018, how would you characterize their audio aura?
+
+ANSWER: Analizing the given data, I would say the listener has an energetic aura because the average energy is 0.66 so the listener has a tendency to like energetic songs.
+Also the listener likes music to dance to, the average danceability of the user's top songs is 0.72 so almost 3 in 4 songs is danceable to.
+ Regarding Valence, the user has no preference for positive or negative mood of the music he listens to, the valence average is 0.48.
+
+QUESTION: Hypothesize about why the way you’ve calculated this aura might not be very representative of the listener. What better ways of calculating this aura would you propose?
+
+ANSWER: I would assign a lesser value to the current popular songs since the listener may play them regardless of their current mood.
+Just because the music is popular doesn't necessarily reflect the listener's true mood accurately.
+Instead, I would use the songs the listener actively chooses to play to more accurately assess their mood aura.
